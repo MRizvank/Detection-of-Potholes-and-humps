@@ -1,0 +1,26 @@
+{% extends 'tempapp/Trafficpolice.html' %}
+{% block admin %}
+	<h1 align="center">VIEW TRAFFIC COMPLAINT</h1>
+	<table border="1" align="center">
+		<tr>
+			<td>USER_ID</td>
+            <td>REPLY</td>
+{#			<td>DATE</td>#}
+
+        <td>COMPLAINT</td>
+		</tr>
+        {% if objval %}
+        {% for obj in objval %}
+        <tr>
+			<td>{{ obj.user_id}}</td>
+			<td>{{ obj.reply}}</td>
+{#            <td>{{ obj.date}}</td>#}
+            <td>{{ obj.complaint }}</td>
+
+			<td><a href="{% url 't_reply' idd=obj.id   %}">REPLY</a></td>
+{#			<td><a href="{% url 't_reject' idd=obj.id %}">REJECT</a></td>#}
+		</tr>
+        {% endfor %}
+    {% endif %}
+    </table>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'tempapp/Emergencyservice.html' %}
+{% block admin %}
+
+	<h1 align="center">ACCIDENT ALERT</h1>
+	<TABLE border="1" align="center">
+	<tr>
+			<td>AREA</td>
+			<td>ALERT</td>
+
+		</tr>
+        {% if objval %}
+        {% for obj in objval %}
+		<tr>
+			<td>{{ obj.area }}</td>
+			<td>{{ obj.alert }}</td>
+
+{#			<td><a href="">APPROVE</a></td>#}
+		</tr>
+        {% endfor %}
+    {% endif %}
+	</TABLE>
+{% endblock %}

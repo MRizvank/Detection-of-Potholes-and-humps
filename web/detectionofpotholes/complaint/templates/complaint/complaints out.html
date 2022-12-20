@@ -1,0 +1,25 @@
+{% extends 'tempapp/Admin.html' %}
+{% block admin %}
+	<h1 align="center">VIEW COMPLAINT</h1>
+	<table border="1" align="center">
+		<tr>
+			<td>USER_ID</td>
+			<td>DATE</td>
+			<td>REPLY</td>
+        <td>COMPLAINT</td>
+		</tr>
+        {% if objval %}
+        {% for obj in objval %}
+        <tr>
+			<td>{{ obj.user_id}}</td>
+			<td>{{ obj.date }}</td>
+            <td>{{ obj.replay}}</td>
+            <td>{{ obj.complaint }}</td>
+
+			<td><a href="{% url 'post_reply' idd=obj.id   %}">REPLY</a></td>
+			<td><a href="{% url 'reject' idd=obj.id %}">REJECT</a></td>
+		</tr>
+        {% endfor %}
+    {% endif %}
+    </table>
+{% endblock %}

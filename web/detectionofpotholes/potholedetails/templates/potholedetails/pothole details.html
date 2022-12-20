@@ -1,0 +1,19 @@
+{% extends 'tempapp/Admin.html' %}
+{% block admin %}
+<h1 align="center">VIEW POTHOLE DETAILS</h1>
+<table border="1" align="center">
+<tr>
+	<td>AREA</td>
+	<td>DETAILS</td>
+</tr>
+    {% if objval %}
+        {% for obj in objval %}
+<tr>
+	<td>{{ obj.area }}</td>
+	<td>{{ obj.details }}</td>
+{#	<td><a href="">APPROVE</a></td>#}
+	</tr>
+    {% endfor %}
+{% endif %}
+</table>
+{% endblock %}

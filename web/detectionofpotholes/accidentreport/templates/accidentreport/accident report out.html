@@ -1,0 +1,23 @@
+{% extends 'tempapp/Admin.html' %}
+{% block admin %}
+	<h1 align="center">VIEW ACCIDENT REPORT</h1>
+	<table border="1" align="center">
+		<tr>
+			<td>AREA</td>
+			<td>DATE</td>
+			<td>TIME</td>
+			<td>VEHICLE_CODE</td>
+		</tr>
+        {% if objval %}
+            {% for obj in objval %}
+		<tr>
+			<td>{{ obj.area }}</td>
+			<td>{{ obj.date }}</td>
+			<td>{{ obj.time }}</td>
+			<td>{{ obj.vehicle_code }}</td>
+{#			<td><a href="">APPROVE</a></td>#}
+		</tr>
+        {% endfor %}
+    {% endif %}
+    </table>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'tempapp/login.html' %}
+{% block admin %}
+
+	<form method="post">
+    {% csrf_token %}
+
+		<h1 aign="left">TRAFFIC_REGISTRATION</h1>
+
+		<table>
+			<tr>
+				<td>CONTROL_ROOM</td>
+				<td><input type="text" name="conr"></td>
+			</tr>
+{#			<tr>#}
+{#				<td>DATE</td>#}
+{#				<td><input type="date" name="dat"></td>#}
+{#			</tr>#}
+			<tr>
+				<td>TIME</td>
+				<td><input type="time" name="tt"></td>
+			</tr>
+			<tr><td>EMAIL</td>
+				<td><input type="text" name="email" ></td>
+			</tr>
+			<tr>
+				<td>TELEPHONE_NO</td>
+				<td><input type="text" name="ph"></td>
+			</tr>
+			<tr>
+				<td>LOCATION</td>
+				<td><input type="text" name="loc"></td>
+			</tr>
+
+
+            <tr>
+                <td>USERNAME:</td><td><input type="text" name="user" required> </td>
+                <td>PASSWORD:</td><td><input type="text" name="pass" required></td>
+            </tr>
+
+
+			<tr>
+				<td><input type="submit"name="reg" value="REGISTER"></td>
+			</tr>
+			<tr><td></td>
+				<td><a href="">sign up</td>
+</table>
+    </form>
+        {% endblock %}

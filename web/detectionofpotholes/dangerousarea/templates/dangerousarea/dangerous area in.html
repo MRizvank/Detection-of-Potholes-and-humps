@@ -1,0 +1,22 @@
+{% extends 'tempapp/trafficpolice.html' %}
+{% block admin %}
+<form method="POST">
+        {% csrf_token %}
+		<h1 align="left">DANGEROUS AREA</h1>
+		<table align="left">
+			<tr>
+				<td>LOCATION</td>
+				<td><input type="text" name="NM"></td>
+			</tr>
+			<tr>
+				<td>DETAILS</td>
+				<td><textarea name="det" rows="5"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="sub" value="set"></td>
+			</tr>
+			<td><a href="" >sign up</td>
+		</table>
+    </form>
+{% endblock %}

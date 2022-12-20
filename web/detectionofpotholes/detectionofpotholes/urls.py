@@ -1,0 +1,62 @@
+"""detectionofpotholes URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import url,include
+
+from accidentalert import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    url(r'viewaccidentalert/',include('accidentalert.accidentart_url')),
+    url(r'^postaccdntarea/',include('accidentarea.accdnturl')),
+    url(r'viewaccidentarea/',include('accidentarea.accdnturl')),
+    url('^android/', include('accidentarea.accdnturl')),
+    url(r'^postaccidentreport/',include('accidentreport.accdntreprturl')),
+    url(r'viewaccidentreport/',include('accidentreport.accdntreprturl')),
+    url(r'^postcomplaint/',include('complaint.complainturl')),
+    url(r'viewcomplaint/',include('complaint.complainturl')),
+    url('^android1/',include('complaint.complainturl')),
+    url('^android2/',include('complaint.complainturl')),
+    url(r'^postdetectionalert/',include('detectionalert.dtctionalrturl')),
+    url('^android/',include('detectionalert.dtctionalrturl')),
+    url(r'^postemergencycontact/',include('emergencycontact.emergencycntcturl')),
+    url(r'viewemergencycontact/',include('emergencycontact.emergencycntcturl')),
+    url('^android/',include('emergencycontact.emergencycntcturl')),
+    url(r'^postdangerousarea/',include('dangerousarea.dangrusareaurl')),
+    url('^android/',include('dangerousarea.dangrusareaurl')),
+    url(r'viewdangerousarea/',include('dangerousarea.dangrusareaurl')),
+    url(r'login/',include('login.loginurl')),
+    url('^android/',include('login.loginurl')),
+    url(r'potholealert/',include('potholealert.pothlealrturl')),
+    url('^android/',include('potholealert.pothlealrturl')),
+    url(r'^potholedetails/',include('potholedetails.potholedtilsurl')),
+    url(r'registration/',include('registration.registrtnurl')),
+    # url('^android/',include('registration.registrtnurl')),
+
+
+
+
+
+
+
+
+
+
+
+
+]

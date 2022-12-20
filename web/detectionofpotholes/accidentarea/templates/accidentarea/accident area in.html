@@ -1,0 +1,27 @@
+{% extends 'tempapp/Admin.html' %}
+{% block admin %}
+
+	<form method="POST">
+        {% csrf_token %}
+		<h1 align="left">ACCIDENT AREA</h1>
+		<table>
+			<tr>
+			<td>LOCATION</td>
+			<td><input type="text" name="loc"></td>
+		</tr>
+	<tr>
+		<td>DETAILS</td>
+	<td><textarea name="det" rows="5"></textarea></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="submit" name="sett" value="set"></td>
+	<td></td>
+</tr>
+<tr>
+<td></td>
+	<td><a href="">sign up</a></td>
+
+	</tr></table>
+    </form>
+{% endblock %}

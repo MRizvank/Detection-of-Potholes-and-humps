@@ -1,0 +1,27 @@
+<form method="POST">
+        {% csrf_token %}
+		<h1 align="left">POTHOLE ALERT</h1>
+		<table>
+			<tr>
+			<td>AREA</td>
+			<td><input type="text" name="con"></td>
+		</tr>
+	<tr>
+		<td>DETAILS</td>
+	<td><textarea name="nm" rows="5"></textarea></td>
+</tr>
+<tr>
+	<td>ALERT</td>
+	<td><input type="text" name="pl"></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="submit" name="set" value="set"></td>
+	<td></td>
+</tr>
+<tr>
+<td></td>
+	<td><a href="">sign up</a></td>
+</tr></table></form>
+
+

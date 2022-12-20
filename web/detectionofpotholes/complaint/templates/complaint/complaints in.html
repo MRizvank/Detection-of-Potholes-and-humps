@@ -1,0 +1,33 @@
+{% extends 'tempapp/Admin.html' %}
+{% block admin %}
+<form method="POST">
+        {% csrf_token %}
+		<h1 align="left">COMPLAINT</h1>
+		<table align="left">
+			<tr>
+			<td>USER_ID</td>
+			<td><input type="text" name="usr"></td>
+		</tr>
+	<tr>
+		<td>DATE</td>
+	<td><input type="DATE" name="nm"></td>
+</tr>
+<tr>
+		<td>REPLAY</td>
+	<td><input type="text" name="rep"></td>
+</tr>
+
+            <tr>
+		<td>COMPLAINT</td>
+	<td><input type="text" name="com"></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="submit" name="sett" value="set"></td>
+    <td></td>
+</tr>
+<tr>
+<td></td>
+	<td><a href="">sign up</a></td>
+</tr></table></form>
+{% endblock %}
